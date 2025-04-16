@@ -5,253 +5,225 @@
     <title>Restaurante Buxo de Bode</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
     <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #fffaf0;
+        color: #333;
+      }
+
+      .navbar-customizar {
+        background-color: #800000;
+        padding: 10px 20px;
+      }
+
+      .navbar-nav .nav-link {
+        color: #fff !important;
+        font-weight: bold;
+      }
+
+      .imagem, .arrumar {
+        width: 40px;
+      }
+
       .carousel-item {
         height: 600px;
+      }
+
+      .carousel-item img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .carousel-caption {
+        position: absolute;
+        bottom: 40px;
+        left: 60px;
         color: white;
         text-align: left;
-        padding: 100px;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 20px;
+        border-radius: 10px;
       }
 
-      .featurette-icon {
+      .arrumado {
+        font-family: 'Fugaz One', cursive;
+        font-size: 3rem;
+        text-align: center;
+        color: #800000;
+      }
+
+      .img-bolinha {
         width: 140px;
         height: 140px;
-        background-color: #990000;
+        object-fit: cover;
         border-radius: 50%;
-        margin-bottom: 20px;
+        border: 4px solid #ffcc37;
+        margin-bottom: 15px;
       }
 
-      .container-marketing {
-        padding: 60px 15px;
+      .vermelho {
+        color: #800000;
+        font-weight: bold;
       }
+
+      .amarelo {
+        color: #ffcc37;
+        font-weight: bold;
+      }
+
+      .btn-custom {
+        background-color: #ffcc37;
+        color: #800000;
+        font-weight: bold;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        transition: 0.3s ease;
+      }
+
+      .btn-custom:hover {
+        background-color: #e0b200;
+        color: white;
+      }
+
+      .featurette-heading {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
       .featurette-divider {
         margin: 5rem 0;
       }
 
-      .featurette-heading {
-        font-weight: 300;
-        line-height: 1;
-        letter-spacing: -.05rem;
+      .lead {
+        font-size: 1.1rem;
+        line-height: 1.6;
       }
-
-      .featurette-image {
-        width: 100%;
-        height: auto;
-      }
-
-      .featurette-icon {
-        width: 140px;
-        height: 140px;
-        background-color: #ddd;
-        border-radius: 50%;
-        margin-bottom: 20px;
-      }
-
-      .container-marketing {
-        padding: 60px 15px;
-      }
-
-      .amarelo{
-        color: #ffcc37;
-      }
-
-      .vermelho{
-        color:#990000;
-      }
-      .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .carousel-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 50px;
-    z-index: 10;
-    color: white;
-    text-align: left;
-  }
-  .navbar-customizar {
-    background-color: #990000; 
-  }
-
-  .img-bolinha {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-  .arrumado{
-    color:#990000;
-    text-align: center;
-  }
-  .btn{
-    color:#990000;
-    background-color: #ddd;
-  }
-    .col-md-5{
-      width: 100%;
-      height: auto;
-    }
-
-    .arrumar{
-         width: 50px;
-         position: fixed;
-         top: 10px;        
-         right: 10px;       
-    
-
-    }
-   .imagem{
-    width: 50px;
-
-   }
-
+      .footer {
+            background-color: #7d1116;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
     </style>
   </head>
   <body>
-    <div class="seguir">
-    <nav class="navbar navbar-expand-md navbar-dark navbar-customizar">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#" title="Login"><img src="logo.png" alt="" class="imagem"></i></a>
-      </li>
-    </ul>
 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">  
-           <div class="amarelo">
-          <a class="nav-link " href="cardapio.php">Cardápio</a>
+    <nav class="navbar navbar-expand-md navbar-dark navbar-customizar">
+      <a class="navbar-brand" href="#"><img src="logo.png" class="imagem" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="cardapio.php"><p class="amarelo">Cardápio</p></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="reserva.php">Reservas</a>
+            <a class="nav-link" href="reserva.php"><p class="amarelo">Reservas</p></a>
           </li>
-         
-        
-          <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="login.php" title="Login"><img src="login.png" alt="" class="arrumar"></i></a>
-      </li>
-    </ul>
-          </div>
-        
+          <li class="nav-item">
+            <a class="nav-link" href="login.php"><img src="login.png" class="arrumar" alt="Login"></a>
+          </li>
+        </ul>
+      </div>
     </nav>
-</div>
 
     <div id="meuCarousel" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#meuCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#meuCarousel" data-slide-to="1"></li>
-    <li data-target="#meuCarousel" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://img.atlasobscura.com/5ve8vRFzovicS4GedjFu-t2KwD5Bxnn3hhqfXSYsXDg/rs:fill:780:520:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3RoaW5n/X2ltYWdlcy84MWJj/YmYwMzc3MGU2ZTg4/M2VfQnVjaGFkYSBk/ZSBCb2RlX2JhcmNs/dWJlZG92YXF1ZWly/by5qcGc.jpg" class="d-block w-100" alt="Imagem 1">
-      <div class="carousel-caption d-none d-md-block">
-        
+      <ol class="carousel-indicators">
+        <li data-target="#meuCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#meuCarousel" data-slide-to="1"></li>
+        <li data-target="#meuCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="slide1.png" alt="Imagem 1">
+        </div>
+        <div class="carousel-item">
+          <img src="slide2.png" alt="Imagem 2">
+        </div>
+        <div class="carousel-item">
+          <img src="slide3.png" alt="Imagem 3">
+        </div>
       </div>
+      <a class="carousel-control-prev" href="#meuCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#meuCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
     </div>
-    <div class="carousel-item">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjg0wyHnO0F4WIknx2xM6FirIH8LNcFn_MgQ&s" class="d-block w-100" alt="Imagem 2">
-      <div class="carousel-caption d-none d-md-block">
-       
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="https://cdn.saomarcosonline.com/wp-content/uploads/2020/03/buchada_panela.jpg" class="d-block w-100" alt="Imagem 3">
-      <div class="carousel-caption d-none d-md-block">
-     
-      </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#meuCarousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Anterior</span>
-  </a>
-  <a class="carousel-control-next" href="#meuCarousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Próximo</span>
-  </a>
-</div>
-
-
-    <br>  <br>  <br>  <br>  
-    <h1 class="arrumado">Pratos da Semana</h1>
-    <div class="container container-marketing text-center">
-      <div class="row">
+    <br> <br><br><br><br><br> <br><br>
+    <div class="container mt-5">
+      <h1 class="arrumado">Pratos da Semana</h1>
+      <div class="row text-center">
         <div class="col-lg-4">
-          <img src="https://cdn.saomarcosonline.com/wp-content/uploads/2020/03/buchada_panela.jpg" class="img-bolinha mx-auto d-block" alt="Ícone">
+          <img src="buxada.jpg" class="img-bolinha" alt="Buxada 1">
           <h2 class="vermelho">Buxada</h2>
-          
-
           <p>A buxada é um prato típico do Nordeste feito com as vísceras do bode bem temperadas.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">Ir para o cardápio»</a></p>
+          <a class="btn btn-custom" href="#">Ver cardápio</a>
         </div>
         <div class="col-lg-4">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjg0wyHnO0F4WIknx2xM6FirIH8LNcFn_MgQ&s" class="img-bolinha mx-auto d-block" alt="Ícone">
+          <img src="buxada.jpg" class="img-bolinha" alt="Buxada 2">
           <h2 class="vermelho">Buxada</h2>
           <p>Com sabor marcante, a buxada é cozida lentamente com legumes e bastante cheiro-verde.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">Ir para o cardápio»</a></p>
+          <a class="btn btn-custom" href="#">Ver cardápio</a>
         </div>
         <div class="col-lg-4">
-        <img src="https://img.atlasobscura.com/5ve8vRFzovicS4GedjFu-t2KwD5Bxnn3hhqfXSYsXDg/rs:fill:780:520:1/g:ce/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3RoaW5n/X2ltYWdlcy84MWJj/YmYwMzc3MGU2ZTg4/M2VfQnVjaGFkYSBk/ZSBCb2RlX2JhcmNs/dWJlZG92YXF1ZWly/by5qcGc.jpg" class="img-bolinha mx-auto d-block" alt="Ícone">
+          <img src="buxada.jpg" class="img-bolinha" alt="Buxada 3">
           <h2 class="vermelho">Buxada</h2>
           <p>Tradição nordestina, a buxada é símbolo de resistência cultural e sabor autêntico.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">Ir para o cardápio»</a></p>
+          <a class="btn btn-custom" href="#">Ver cardápio</a>
         </div>
       </div>
-      
     </div>
-   
-   <br>  <br>  <br>  <br>  <br>  <br>  <br> 
-   
-   
-   
-    <div class="container my-5">
-  <div class="row featurette d-flex align-items-center">
-    <div class="col-md-7">
-      <h2 class="featurette-heading"><p class="vermelho">Buxada arretada</p> <span class="text-muted"><p class="amarelo">verdadeira buxada arretada</p></span></h2>
-      <p class="lead">A buxada de bode é um prato tradicional e marcante da culinária nordestina, feito com as vísceras do bode (bucho, tripas, fígado, coração, entre outros), bem limpas e cozidas lentamente em um caldo rico e temperado com alho, cebola, pimentão, tomate, coentro, hortelã e outras especiarias.
 
-O sabor é forte, encorpado e único — uma verdadeira explosão de nordestinidade no prato. Servida com arroz, pirão, farinha ou até macaxeira, a buxada é símbolo de resistência cultural</p>
+    <hr class="featurette-divider">
+      <br> <br><br><br><br>
+    <div class="container">
+      <div class="row featurette d-flex align-items-center">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">
+            <span class="vermelho">Buxada arretada</span>
+            <span class="amarelo"> - verdadeira buxada arretada</span>
+          </h2>
+          <p class="lead">A buxada de bode é um prato tradicional e marcante da culinária nordestina, feito com as vísceras do bode (bucho, tripas, fígado, coração, entre outros), bem limpas e cozidas lentamente em um caldo rico e temperado com alho, cebola, pimentão, tomate, coentro, hortelã e outras especiarias. O sabor é forte, encorpado e único — uma verdadeira explosão de nordestinidade no prato. Servida com arroz, pirão, farinha ou até macaxeira, a buxada é símbolo de resistência cultural.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="buxada.jpg" class="img-fluid" alt="Buxada Tradicional">
+        </div>
+      </div>
     </div>
-    <div class="col-md-5">
-      <img src="https://cdn.saomarcosonline.com/wp-content/uploads/2020/03/buchada_panela.jpg" class="img-fluid mx-auto" alt="Imagem genérica" width="500" height="500">
+
+    <br><br><br><br>
+
+    <div class="container">
+      <div class="row featurette d-flex align-items-center">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">
+            <span class="vermelho">Buxada arretada</span>
+            <span class="amarelo"> - verdadeira buxada arretada</span>
+          </h2>
+          <p class="lead">A buxada de bode é um prato tradicional e marcante da culinária nordestina, feito com as vísceras do bode (bucho, tripas, fígado, coração, entre outros), bem limpas e cozidas lentamente em um caldo rico e temperado com alho, cebola, pimentão, tomate, coentro, hortelã e outras especiarias. O sabor é forte, encorpado e único — uma verdadeira explosão de nordestinidade no prato. Servida com arroz, pirão, farinha ou até macaxeira, a buxada é símbolo de resistência cultural.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="buxada.jpg" class="img-fluid" alt="Buxada Tradicional">
+        </div>
+      </div>
     </div>
-  </div>
+
+    <div class="footer">
+    <p>&copy; 2025 Buxo de Bode. Todos os direitos reservados.</p>
 </div>
-
-
-<br><br><br>
-<div class="container my-5">
-  <div class="row featurette d-flex align-items-center">
-    <div class="col-md-7">
-
-    
-      <h2 class="featurette-heading"><p class="vermelho">Buxada arretada</p> <span class="text-muted"><p class="amarelo">verdadeira buxada arretada</p></span></h2>
-      <p class="lead">A buxada de bode é um prato tradicional e marcante da culinária nordestina, feito com as vísceras do bode (bucho, tripas, fígado, coração, entre outros), bem limpas e cozidas lentamente em um caldo rico e temperado com alho, cebola, pimentão, tomate, coentro, hortelã e outras especiarias.
-      O sabor é forte, encorpado e único — uma verdadeira explosão de nordestinidade no prato. Servida com arroz, pirão, farinha ou até macaxeira, a buxada é símbolo de resistência cultural</p>
-  </div>
-    <div class="col-md-5">
-      <img src="https://cdn.saomarcosonline.com/wp-content/uploads/2020/03/buchada_panela.jpg" class="img-fluid mx-auto" alt="Imagem genérica" width="500" height="500">
-    </div>
-  </div>
-</div>
-
-  
-
-
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
