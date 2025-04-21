@@ -1,0 +1,8 @@
+<?php
+include 'conexao.php';
+
+$id = $_GET['id'];
+$conn->query("DELETE FROM usuarios WHERE id_usuario = $id");
+header("Location: telaadm.php");  // Redireciona para a tela de administração
+exit;
+?>
